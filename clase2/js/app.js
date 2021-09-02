@@ -32,7 +32,10 @@ if(planeta==='jupiter'){
    peso = Number(peso) *2.53;
 } else if (planeta ==='luna'){
    peso = Number(peso) * 0.16;
-} else {
+} else if (planeta === 'marte') {
+   peso = Number(peso) * 3.71;
+}
+else {
   planeta='bobolandia'.toUpperCase()
   peso= 1000000;
   nombre='usuario desagradable'

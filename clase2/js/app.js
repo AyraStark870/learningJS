@@ -26,7 +26,7 @@ let nombre = prompt('ingresar su nombre');
 do{
     peso = prompt('ingresar su peso en kg, solamente valores numericos');
 } while (isNaN(peso))
-let planeta = prompt('desea viajar a Jupiter o la Luna?')
+let planeta = prompt('¿desea viajar a Jupiter, Marte o la Luna? solo una de las tres opciones porfa')
 
 if(planeta==='jupiter'){
    peso = Number(peso) *2.53;
@@ -38,6 +38,6 @@ if(planeta==='jupiter'){
 else {
   planeta='bobolandia'.toUpperCase()
   peso= 1000000;
-  nombre='usuario desagradable'
+  nombre='payaso'
 }
 console.log(`${nombre} en ${planeta} su peso seria ${peso}kg` );

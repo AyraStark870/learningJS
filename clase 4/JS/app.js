@@ -24,7 +24,7 @@ function transform(x){
    if(i%2 ===0){
    newPhrase += x[i].toUpperCase();
    } else {
-     newPhrase += x[i]
+     newPhrase += x[i].toLowerCase();
    }
   }
   return newPhrase

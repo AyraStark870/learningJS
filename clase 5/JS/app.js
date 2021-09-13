@@ -8,14 +8,14 @@ function tablaMultip(){
     let nun =0;
     do {
         nun = Number(prompt('dime numero de 1 al 10'))
-    } while (nun > 10 || isNaN(nun))
+    } while (nun > 10 || nun < 0  ||isNaN(nun))
     for(let i = 1; i<=10;i++){
         console.log(`${nun} X ${i} =` + nun * i);
     }
 }
-
 tablaMultip();
 */
+
 
 console.log('***************************')
 console.log('EJERCICIO 3');
@@ -33,12 +33,12 @@ for(let i = 0; i<=nun1; i++){
     }
 }
 */
+/*
 console.log('***************************')
 console.log('EJERCICIO 4');
 console.log('***************************')
 
 
-/*
 let nun2 = prompt('introducir numero')
 let suma = 0
 for(let i = 0; i<nun2.length;i++){
@@ -77,7 +77,7 @@ console.log(suma);
 console.log('***************************')
 console.log('EJERCICIO 7');
 console.log('***************************')
-
+/*
 
     let frase= prompt('introduce una frase');
     let nuevaFrase = frase.split(' ')
@@ -91,7 +91,7 @@ console.log('***************************')
         }
     }
     console.log(prueba);
-
+*/
 
 console.log('***************************')
 console.log('EJERCICIO 8');
@@ -99,7 +99,7 @@ console.log('***************************')
 /*
 Ejercicio 8:
 Desarrollar un programa que solicite 10 números e imprima la suma de lo últimos 5 valores ingresados.
-
+*/
 let suma=0;
 for(let i =1 ; i<=10; i++){
  let nun = Number(prompt('introducir numero'))
@@ -108,4 +108,3 @@ for(let i =1 ; i<=10; i++){
  }
 }
 console.log(suma);
-*/

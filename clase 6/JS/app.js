@@ -5,6 +5,15 @@
     botones[i].classList.add(`btn-${i}`,'m-2')
   }
 
+ const btnDanger = document.querySelector('.btn-danger')
+ console.log(btnDanger);
+ /*
+ btnDanger.addEventListener('click', (e) => {
+   console.log(e);
+ botones.forEach( boton => {
+     boton.disabled = false
+   })
+ })*/
 
 const mostrarHTML = (someFunction, numerobtn) => {
   const parrafo = document.createElement('p')
@@ -310,20 +319,20 @@ const determinarMultiplos = () => {
     if(isNaN(nun)){
      console.log('no sirve');
     } else {
-      arrayNun.unshift(nun)
+      arrayNun.push(nun)
     }
   } while (i != 0)
  console.log(arrayNun);
 
  for(let i = 0; i < arrayNun.length; i++){
    if (arrayNun[i] % 2 === 0 ){
-    resultado = resultado + `${arrayNun[i]} es multiplo de 2... \n`
+    resultado = resultado + `${arrayNun[i]} es multiplo de: 2... \n`
    } else if (arrayNun[i] %3 === 0) {
-     resultado = resultado + `${arrayNun[i]} es multiplo de 3 ... \n`
+     resultado = resultado + `${arrayNun[i]} es multiplo de: 3 ... \n`
    } else if (arrayNun[i] % 5 === 0) {
-     resultado = resultado + `${arrayNun[i]} es multiplo de 5... \n`
+     resultado = resultado + `${arrayNun[i]} es multiplo de: 5... \n`
    } else if (arrayNun[i] % 4 === 0) {
-     resultado = resultado + `${arrayNun[i]} es multiplo de 4 ...\n`
+     resultado = resultado + `${arrayNun[i]} es multiplo de: 4 ...\n`
    } else {
      resultado = resultado + `${arrayNun[i]} es un multiplo frustrado ...\n`
    }
@@ -333,6 +342,40 @@ return resultado
 document.querySelector('.btn-11').addEventListener('click', () => {
   mostrarHTML(determinarMultiplos, 11)
 })
+
+
+
+let dataArray = [
+  ["Fernanda", "Palacios"],
+  ["Alfred", "Altamirano"],
+  ["Angel", "Resendiz"],
+  ["Elda", "Corona"],
+  ["Tux", "Tuxtla"],
+  ["Jorge", "De Buen"]
+]
+
+let newArrayMentors = []
+
+
+for(let i = 0; i<dataArray.length; i++){
+   newArrayMentors.push({name: dataArray[i][0], lastname: dataArray[i][1]})
+}
+
+console.log(newArrayMentors);
+/*
+arrayMentor = [
+    {
+        name: "Fernanda",
+        lastName: "Palacios"
+    },
+    {
+        name: "Alfred",
+        lastName: "Altamirano"
+    },
+    ...,
+    {...}
+]
+*/
 
 
 /*

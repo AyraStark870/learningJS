@@ -1,8 +1,19 @@
 .resultados{
   color: white;
   font-weight: 600;
-  background-color: rgb(68, 64, 64);
+  background-color: rgb(90, 88, 88);
+  font-size: 20px;
 }
-button{
-  font-weight: 600;
+.btn-primary{
+  font-weight: 700;
+  color:  rgb(68, 64, 64);
+  background-color: rgb(154, 154, 212);
+  border: none;
+}
+.btn-danger{
+  background-color: rgb(156, 156, 68);
+    font-weight: 700;
+}
+h1{
+  color:  rgb(68, 64, 64);
 }

@@ -10,8 +10,8 @@ console.log(btnDanger);
 
 
 btnDanger.addEventListener('click', (e) => {
-  console.log(e);
-botones.forEach( boton => {
+
+  botones.forEach( boton => {
     boton.disabled = false
   })
 })
@@ -23,7 +23,7 @@ const mostrarHTML = (someFunction, numerobtn) => {
 
   setTimeout(() => {
     parrafo.remove()
-  }, 5000);
+  }, 10000);
   document.querySelector(`.btn-${numerobtn}`).disabled = true
 }
 
@@ -106,28 +106,11 @@ let mentorArray = [
       },
       {
         signature: "CSS",
-        score: 10
+        score: 9
       },
       {
         signature: "JS",
         score: 10
-      },
-    ]
-  },
-  {
-    name: "Severus Snape",
-    scores: [
-      {
-        signature: "HTML",
-        score: 1
-      },
-      {
-        signature: "CSS",
-        score: 3
-      },
-      {
-        signature: "JS",
-        score: 2
       },
     ]
   }
@@ -137,16 +120,14 @@ let mentorArray = [
 const helper = someArray => {
   const arregloIntermedio = []
   someArray.forEach(element => {
-    arregloIntermedio.push(element.scores)
+    const {scores} = element
+    arregloIntermedio.push(scores)
   });
   return arregloIntermedio
+
 }
 
-
-
-
 const obtenerAltoScore = ( ) => {
-
   let resultado
   let myreturn = ''
 
@@ -205,16 +186,39 @@ const promedios = () => {
   let puntosCSS = 0
   let puntosJS = 0
 
-    mentorArray.forEach(somethingcito => {
+    mentorArray.forEach((somethingcito) => {
     puntosHTML += somethingcito.scores[0].score;
     puntosCSS += somethingcito.scores[1].score;
     puntosJS += somethingcito.scores[2].score;
+
   })
 
-  return `el promedio de la materias HTML, CSS y JS es ${puntosHTML}, ${puntosCSS} y ${puntosJS} puntos respectivamente`;
+  return `el promedio de la materias HTML, CSS y JS es ${puntosHTML / mentorArray.length}, ${puntosCSS / mentorArray.length} y ${puntosJS / mentorArray.length} puntos respectivamente`;
 }
 document.querySelector('.btn-2').addEventListener('click', () => {
   mostrarHTML(promedios, 2)
 })
 
-console.log(promedios(mentorArray));
+// console.log(helper(mentorArray));
+
+
+let dataArray = [
+  ["Fernanda", "Palacios"],
+  ["Alfred", "Altamirano"],
+  ["Angel", "Resendiz"],
+  ["Elda", "Corona"],
+  ["Tux", "Tuxtla"],
+  ["Jorge", "De Buen"]
+]
+
+let newArrayMentors = []
+
+/*
+dataArray.forEach( (x,index) => {
+  console.log(x);
+  // newArrayMentors.push({ name: x[index][0], lastname: x[index][1] })
+})
+  // newArrayMentors.push({ name: dataArray[i][0], lastname: dataArray[i][1] })
+
+
+console.log(newArrayMentors);*/

@@ -80,13 +80,10 @@ const conseguirArregloBandas = unArreglo => {
   return nombresBandasArray
 }
 const eliminarItemRepetido = arreglo => arreglo.filter((elemento, i) => arreglo.indexOf(elemento) === i)
-// console.log(nombresBandas(songsData));
 
 // indexOf() retorna el 1er índice en el que esta un elemento dado en el array, entonces cuando preguntas en que posición
 // se encuentra un elemnto y no corresponde con el indice significa que es repetido.
-/*
-console.log(songsData);
-*/
+
 console.log(nombresBandasSinRepetir(songsData));
 
 
@@ -97,15 +94,16 @@ const agruparCancionesPorBandas = arreglo => {
   let nuevoArreglo = []
   arregloBandasNoRepetidas.forEach((banda,i)  =>{
     nuevoArreglo[i] =  arreglo.filter( item => item.band===banda)
-
-
   })
+
   let arregloCancionesXBanda = []
   nuevoArreglo.forEach((elemento, indice) => {
+
     arregloCancionesXBanda[indice] = []
-     elemento.forEach( (x,i) => {
+    elemento.forEach( (x) => {
       // console.log(x.band);
-       arregloCancionesXBanda[indice].push(x.name );
+      arregloCancionesXBanda[indice].push(x.name );
+
 
       // arregloCancionesXBandaObjeto = arregloCancionesXBanda.map(elemento => ` las canciones de ${} son ${elemento}` )
 
@@ -116,7 +114,7 @@ const agruparCancionesPorBandas = arreglo => {
 
 }
 
-console.log(agruparCancionesPorBandas(songsData));
+ console.log(agruparCancionesPorBandas(songsData));
 
 
 
@@ -151,4 +149,22 @@ const cancionMasDeLoQueSea = (arreglo, criterio) =>{
 }
 
 console.log(cancionMasDeLoQueSea (songsData, 'likes'));
+//aca esta mejor porque incluyo el nombre de la banda
+const agruparCancionesPorBandasMejor = () => {
 
+  const cancionesAgrupadas = (arreglo, banda) => {//esto me lo inspiro el codigo de adolfo
+    let canciones = arreglo.filter(data => data.band === banda)
+    return canciones;
+  }
+
+  const BandasNoRepetidas = nombresBandasSinRepetir(songsData)
+   let  prueba = []
+
+  BandasNoRepetidas.forEach( (banda, indice) => {
+    prueba[indice] = { banda: banda, canciones: cancionesAgrupadas(songsData, banda) }
+    // console.log(songGroup(songsData, banda));
+  })
+  console.log(prueba);
+}
+agruparCancionesPorBandasMejor()
+// console.log(songGroup(songsData,'Maná'));

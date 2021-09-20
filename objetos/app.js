@@ -154,7 +154,8 @@ const agruparCancionesPorBandasMejor = () => {
 
   const cancionesAgrupadas = (arreglo, banda) => {//esto me lo inspiro el codigo de adolfo
     let canciones = arreglo.filter(data => data.band === banda)
-    return canciones;
+    let soloCanciones = canciones.map( elemento => elemento.name )
+    return soloCanciones;
   }
 
   const BandasNoRepetidas = nombresBandasSinRepetir(songsData)

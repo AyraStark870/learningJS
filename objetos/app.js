@@ -165,7 +165,39 @@ const agruparCancionesPorBandasMejor = () => {
     prueba[indice] = { banda: banda, canciones: cancionesAgrupadas(songsData, banda) }
     // console.log(songGroup(songsData, banda));
   })
-  console.log(prueba);
+ return prueba
 }
-agruparCancionesPorBandasMejor()
+console.log(agruparCancionesPorBandasMejor());
+
 // console.log(songGroup(songsData,'Maná'));
+
+/*
+Obtener una lista de strings con el siguiente formato:
+"La cancion {name} es de {banda}"
+*/
+
+
+/*
+crear una funcion que me permita Obtener las canciones que contengan un criterio de busqueda
+criterio: cel
+[
+  {
+    name: "La celula que explota",
+    band: "Jaguares",
+    releaseYear: "1999",
+    statistics: {
+      likes: 12000,
+      reproductions: 23421
+    },
+  }
+]
+*/
+const listaString = arreglo => arreglo.map(cancion => `la cancion "${cancion.name}" de: ${cancion.band}`)
+
+console.log(listaString(songsData));
+
+const obtenerSegunCriterio = (arreglo, donde,criterio) => arreglo.filter(
+  cancion => cancion[donde].indexOf(criterio) > 0
+)
+
+console.log(obtenerSegunCriterio(songsData, 'band','itos'));

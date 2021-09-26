@@ -97,25 +97,24 @@ const dibujarTabla = () => {
     const th = document.createElement('th')
     th.textContent = mentor.name
     row.appendChild(th)
-    table.appendChild(row)
-    mentor.scores.forEach(score => {
+    mentor.scores.forEach(x => {
+      const {score} = x
       const mitd = document.createElement('td')
-
-      mitd.textContent = score.score
+      mitd.textContent = score
       row.appendChild(mitd)
     })
     const celda = document.createElement('td');
     const btn = document.createElement('button')
     btn.textContent ='X';
-    btn.classList.add('btn', 'btn-primary', 'font-weight-bold' )
-    btn.onclick = (e) => {
-      e.target.parentElement.parentElement.remove()
-    }
+    btn.classList.add('btn', 'btn-primary')
+    btn.onclick = e => e.target.parentElement.parentElement.remove()
+    // probar luego generando un id y eliminar con un filter por ese id
     celda.appendChild(btn)
     row.appendChild(celda)
+    table.appendChild(row)
 
   })
-  document.querySelector('.container').appendChild(table)
+
 }
 dibujarTabla()
 

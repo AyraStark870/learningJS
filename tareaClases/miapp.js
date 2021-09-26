@@ -13,7 +13,7 @@ const productos = [
     precioVenta: 28,
     precioCompra: 11,
     precioUltimosMeses: [],
-    cantVendidasUltimaSemana: 12
+    cantVendidasUltimaSemana: 70
    },
    {
     nombre: 'latigo',
@@ -78,5 +78,13 @@ console.log(diff/(1000*60*60*24) );*/
 
 const productosObj =  productos.map( (prod, i) => new ProductoObj(prod.nombre, prod.fechaCaducidad,  prod.precioVenta,i, prod.cantVendidasUltimaSemana,prod.precioCompra))
 
+
+const muchasCantidadesVendidas = () => {
+    let masVendidos =  productosObj.filter(prod => prod.cantVendidasUltimaSemana > 50)
+    return masVendidos
+}
+
+console.log(muchasCantidadesVendidas());
 console.log(productosObj);
 console.log(productosObj[0].daysToExpire());
+

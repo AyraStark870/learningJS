@@ -1,8 +1,12 @@
 body{
-  background-color: bisque;
+
 }
 
 .resultados{
   color: red;
   font-size: 700;
+}
+.table {
+  border: 1px solid red;
+
 }

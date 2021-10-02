@@ -18,6 +18,7 @@ function recogeDatos(e) {
   formulario.reset()
   arreglo.push(x)
   console.log(arreglo);
+  table.dibujarTabla()
 }
 
 
@@ -177,7 +178,7 @@ const dibujarTabla = () => {
   table.dibujarTabla()
 }
 
-document.querySelector('.print').addEventListener('click', dibujarTabla)
+//document.querySelector('.print').addEventListener('click', dibujarTabla)
 
 
 /*<table class="table  text-center ">

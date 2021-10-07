@@ -1,0 +1,16 @@
+.square, .circle, .rectangle {
+    border: 1px solid red;
+}
+
+.square, .circle {
+    width: 200px;
+    height: 200px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.rectangle {
+    height: 400px;
+}

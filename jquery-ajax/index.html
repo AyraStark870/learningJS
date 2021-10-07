@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="container mt-5 p-5">
+      <div id="contenido" class="row">
+        <div class="col-md-6 agregar-cita">
+          <form id="nuevo-koder">
+            <legend class="mb-4">Datos Koders</legend>
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Nombre:</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">telefono</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="tel" id="telefono" name="telefono" class="form-control"
+                  placeholder="telefono">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">github</label>
+              <div class="col-sm-8 col-lg-8">
+                <input type="text" id="github" name="github" class="form-control"
+                  placeholder="github">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">GitHub url</label>
+              <div class="col-sm-8 col-lg-8">
+                 <input type="text" id="github-url" name="githubUrl" class="form-control" placeholder="github url">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="crear koder" class="btn-crear btn btn-success w-100 d-block">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2 id="administra" class="mb-4">ver Koders</h2>
+          <ul id="mis-productos" class="list-group lista-citas"></ul>
+        </div>
+      </div>
+      <!--.row-->
+     <div class="mt-5 mis-cards">
+
+      </div>
+          <!--.card-->
+      </div>
+    </div>
+    <!--.container-->
+
+        <div class="row modales">
+          <div class="col-8 modalesSegundo">
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+    integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+    crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+      integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+      <script src="./main.js"></script>
+    </body>
+
+</html>
